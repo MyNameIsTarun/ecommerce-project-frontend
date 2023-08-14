@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Units in stock</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td class="align-middle">
+                <img src="{{product.imageUrl}}" alt="placeholder image for product" height="100">
+            </td>
+            <td class="align-middle">{{product.name}}</td>
+            <td class="align-middle">{{product.unitPrice | currency: 'USD'}}</td>
+            <td class="align-middle">{{product.unitsInStock}}</td>
+        </tr>
+    </tbody>
+</table>
